@@ -1,0 +1,139 @@
+@import "variables";
+
+/* ==========================================================================
+Styles de base
+========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: $light;
+  font-family: $main-font;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $secondary;
+  font-family: $title-font;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+Entête
+========================================================================== */
+
+.site-header {
+  background-color: $light;
+  border-bottom: 2px $gray-300 solid;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.6em;
+}
+
+.site-title {
+  color: $primary;
+  display: block;
+  font-size: 1.2em;
+  margin: 0 0.2em;
+  text-decoration: none;
+}
+
+.site-description {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0 0.2em;
+}
+
+/* ==========================================================================
+Bloc de navigation
+========================================================================== */
+
+.site-nav {
+  padding: 1.4em;
+  position: fixed;
+  right: 0;
+  top: 4em;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin: 0.5em 0;
+  }
+
+  a {
+    color: $gray-400;
+    font-variant: small-caps;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1.5px solid $gray-500;
+    }
+  }
+}
+
+/* ==========================================================================
+Contenu de la page
+========================================================================== */
+
+.page-content {
+  margin: 1em auto;
+  padding: 1em;
+  width: 1000px;
+}
+
+.post-list {
+  list-style: none;
+  padding-left: 0.6em;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.post-meta {
+  color: $gray-400;
+  font-size: 0.8em;
+}
+
+.post-link {
+  color: $primary;
+  font-weight: bolder;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+Pied de page
+========================================================================== */
+
+.site-footer {
+  background-color: $secondary;
+  color: $light;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 0.3em;
+  }
+}
+
+.author-email {
+  color: $light;
+  font-style: italic;
+}

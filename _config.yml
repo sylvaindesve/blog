@@ -1,0 +1,22 @@
+# Informations générales
+title: L'agilité est un chemin
+author: Sylvain Desvé
+email: sylvain.desve@gmail.com
+description: >-
+  Réflexions autour de nos métodes de travail.
+lang: fr
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Gestion des extraits
+show_excerpts: true
+page_excerpts: true
+excerpt_separator: <!--extrait-->
+
+# Format de date
+date_format: "%-d %b %Y"
+
+# Configuration pour la génération du site
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

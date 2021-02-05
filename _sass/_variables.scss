@@ -1,0 +1,34 @@
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$hint-of-red: #f6f3f6 !default;
+$golden-sand: #f0dd6c !default;
+$polo-blue: #8bafcf !default;
+$mobster: #7a737d !default;
+$matisse: #1f5095 !default;
+$biscay: #193a68 !default;
+
+$aqua-forest: #5faf76 !default;
+$anzac: #dc9f3e !default;
+$pomegranate: #f44336 !default;
+
+$primary: $polo-blue !default;
+$secondary: $matisse !default;
+$success: $aqua-forest !default;
+$info: $matisse !default;
+$warning: $anzac !default;
+$danger: $pomegranate !default;
+$light: $hint-of-red !default;
+$dark: $gray-900 !default;
+
+$main-font: "Roboto", "Helvetica", "Arial", sans-serif;
+$title-font: "Roboto Slab", "Times New Roman", serif;

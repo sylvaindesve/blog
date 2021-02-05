@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <ul>
+    <li>
+      {%- if site.author -%} {{ site.author | escape }} {%- else -%} {{ site.title | escape }} {%- endif -%}
+    </li>
+    {%- if site.email -%}
+    <li>
+      <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </li>
+    {%- endif -%}
+  </ul>
+</footer>
