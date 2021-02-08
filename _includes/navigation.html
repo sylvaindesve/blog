@@ -1,7 +1,10 @@
-{%- assign page_paths = site.pages | map: "path" -%}
-{%- if page_paths -%}
-  <nav class="site-nav">
-    <ul>
+<nav class="site-nav">
+  <ul>
+    <li>
+      <a class="page-link" href="{{ "/" | relative_url }}">Accueil</a>
+    </li>
+    {%- assign page_paths = site.pages | map: "path" -%}
+    {%- if page_paths -%}
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title -%}
@@ -10,6 +13,6 @@
         </li>
         {%- endif -%}
       {%- endfor -%}
-    </ul>
-  </nav>
-{%- endif -%}
+    {%- endif -%}
+  </ul>
+</nav>
