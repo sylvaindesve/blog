@@ -12,9 +12,11 @@ Styles de base
 
 html {
   background: $light;
+  color: $gray-700;
   font-family: $main-font;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 28px;
 }
 
 h1,
@@ -26,9 +28,25 @@ h4 {
   font-weight: 700;
 }
 
+h1 {
+  margin: 0.2rem 0;
+}
+
+h2 {
+  margin: 0.1rem 0;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 ol,
@@ -84,6 +102,7 @@ Entête
 .site-title {
   color: $primary;
   display: block;
+  font-family: $title-font;
   font-size: 1.2em;
   margin: 0 0.2em;
   text-decoration: none;
@@ -93,7 +112,7 @@ Entête
   display: block;
   font-size: 0.8em;
   font-style: italic;
-  margin: 0 0.2em;
+  margin: 0.15rem 0.4rem;
 }
 
 /* ==========================================================================
@@ -128,6 +147,11 @@ Contenu de la page
 .page-content {
   margin: 1em auto 4em auto;
   padding: 1em;
+
+  h2 {
+    color: $primary;
+    font-variant: small-caps;
+  }
 }
 
 .post-list {
