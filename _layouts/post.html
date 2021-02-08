@@ -8,8 +8,8 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | localize: date_format }}
       </time>
     </p>
   </header>

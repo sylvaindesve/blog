@@ -17,7 +17,7 @@ page_excerpts: true
 excerpt_separator: <!--extrait-->
 
 # Format de date
-date_format: "%-d %b %Y"
+date_format: "%-d %B %Y"
 
 # Configuration pour la génération du site
 plugins:
