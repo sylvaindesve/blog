@@ -6,13 +6,15 @@ Styles de base
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   background: $light;
   font-family: $main-font;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 h1,
@@ -22,6 +24,40 @@ h4 {
   color: $secondary;
   font-family: $title-font;
   font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+blockquote {
+  border-left: 3px solid $primary;
+  color: $primary;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 1rem 3rem;
+  quotes: "“" "”" "‘" "’";
+
+  p {
+    margin: 1rem;
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
 }
 
 a {
