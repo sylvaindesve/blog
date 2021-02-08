@@ -175,6 +175,14 @@ Contenu de la page
   text-decoration: none;
 }
 
+.post-content {
+  text-align: justify;
+
+  img {
+    width: 100%;
+  }
+}
+
 /* ==========================================================================
 Pied de page
 ========================================================================== */
@@ -182,6 +190,7 @@ Pied de page
 .site-footer {
   background-color: $secondary;
   color: $light;
+  font-family: $title-font;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -189,12 +198,13 @@ Pied de page
 
   ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     list-style: none;
+    margin: 0.8rem 0;
   }
 
   li {
-    margin: 0 0.3em;
+    margin: 0 0.3rem;
   }
 }
 
