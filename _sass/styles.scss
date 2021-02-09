@@ -182,6 +182,16 @@ Contenu de la page
     display: block;
     margin: 0 auto;
     width: 75%;
+
+    &.small-img {
+      width: 200px;
+      &.left {
+        float:left;
+      }
+      &.right {
+        float:right;
+      }
+    }
   }
 }
 
