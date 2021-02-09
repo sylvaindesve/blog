@@ -1,0 +1,11 @@
+{
+  "name": "blog",
+  "repository": "git@github-sylvain:sylvaindesve/blog.git",
+  "author": "Sylvain Desvé <sylvain.desve@gmail.com>",
+  "private": true,
+  "scripts": {
+    "build": "bundle exec jekyll build -s src --config ./_config.yml",
+    "clean": "bundle exec jekyll clean",
+    "dev": "bundle exec jekyll serve --drafts"
+  }
+}
