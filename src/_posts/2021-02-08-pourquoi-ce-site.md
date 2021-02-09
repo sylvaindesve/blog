@@ -2,7 +2,6 @@
 layout: post
 title: "Pourquoi ce site ?"
 date: 2021-02-08 15:00:00 +0100
-categories: welcome
 ---
 
 Pourquoi donc publier un tel site ?
