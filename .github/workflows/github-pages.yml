@@ -15,7 +15,7 @@ jobs:
       - name: 💎 Installation de Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.0.0
 
       - name: 🔨 Installation des dépendances et construction du site
         uses: limjh16/jekyll-action-ts@v2
