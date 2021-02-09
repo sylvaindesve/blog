@@ -26,7 +26,7 @@ module Jekyll
     end
 
     def locale_exists_in_locales_dir(file_name)
-        return File.exists?(File.join('../_locales/',file_name))
+        return File.exists?(File.join(File.dirname(__FILE__),'../_locales/',file_name))
     end
   end
 end
