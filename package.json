@@ -6,6 +6,10 @@
   "scripts": {
     "build": "bundle exec jekyll build -s src --config ./_config.yml",
     "clean": "bundle exec jekyll clean",
-    "dev": "bundle exec jekyll serve --drafts"
+    "dev": "bundle exec jekyll serve --drafts",
+    "prettier": "prettier -c src"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
   }
 }
