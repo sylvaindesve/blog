@@ -1,4 +1,4 @@
-name: Génère et déploie le site sur GitHub Pages
+name: Génération et déploiement du site sur GitHub Pages
 
 on:
   push:
@@ -9,21 +9,12 @@ jobs:
   jekyll:
     runs-on: ubuntu-16.04
     steps:
-      - name: 📂 Récupération du code
-        uses: actions/checkout@v2
+    - name: 📂 Récupération du code
+      uses: actions/checkout@v2
 
-      - name: 💎 Installation de Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.0.0
-
-      - name: 🔨 Installation des dépendances et construction du site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-
-      - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+    - name: 🚀 Construction et déploiement
+      uses:  helaili/jekyll-action@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        jekyll_src: 'src'
+        jekyll_build_options: "--config ./_config.yml"
