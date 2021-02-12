@@ -203,16 +203,14 @@ Pied de page
   background-color: $secondary;
   color: $light;
   font-family: $title-font;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
 
   ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0.8rem 0;
+    padding: 0.8rem 0;
+    margin: 0;
   }
 
   li {
@@ -269,6 +267,20 @@ Responsive Design
 
   .page-content {
     width: 95%;
+  }
+}
+
+/* Tablette */
+@media only screen and (min-width: 401px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .page-content {
+    margin-top: 4rem;
   }
 }
 
