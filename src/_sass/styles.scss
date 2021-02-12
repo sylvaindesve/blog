@@ -4,13 +4,15 @@
 Styles de base
 ========================================================================== */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
+:root {
   background: $light;
   color: $gray-700;
   font-family: $main-font;
@@ -33,6 +35,14 @@ h1 {
 }
 
 h2 {
+  color: $primary;
+  font-variant: small-caps;
+  margin: 0.1rem 0;
+}
+
+h3 {
+  color: lighten($primary, 15%);
+  font-variant: small-caps;
   margin: 0.1rem 0;
 }
 
@@ -56,13 +66,22 @@ ul {
   padding-left: 2rem;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+  &:hover {
+    color: lighten($primary, 10%);
+    text-decoration: underline;
+  }
+}
+
 blockquote {
   border-left: 3px solid $primary;
   color: $primary;
   font-size: 1.2rem;
   font-style: italic;
   font-weight: 400;
-  margin: 0 0 1rem 3rem;
+  margin: 0 0 1rem 1.5rem;
   quotes: "“" "”" "‘" "’";
 
   p {
@@ -78,66 +97,46 @@ blockquote {
   }
 }
 
-a {
-  color: $primary;
-  text-decoration: none;
-  &:hover {
-    color: lighten($primary, 10%);
-    text-decoration: underline;
-  }
-}
-
 /* ==========================================================================
 Entête
 ========================================================================== */
 
 .site-header {
-  background-color: $light;
   border-bottom: 2px $gray-300 solid;
-  display: flex;
-  justify-content: flex-start;
-  padding: 0.6em;
-}
-
-.site-title {
-  color: $primary;
-  display: block;
-  font-family: $title-font;
-  font-size: 0.6em;
-  font-weight: 400;
-  margin: 0 0.2em;
-  text-decoration: none;
-}
-
-.site-description {
-  display: block;
-  font-size: 0.8em;
-  font-style: italic;
-  margin: 0.15rem 0.4rem;
+  padding: 0.2rem;
+  h1 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  p {
+    font-size: 0.7rem;
+    font-style: italic;
+    margin-bottom: 0;
+  }
 }
 
 /* ==========================================================================
-Bloc de navigation
+Navigation
 ========================================================================== */
 
 .site-nav {
+  border-bottom: 1px $gray-300 solid;
+  font-variant: small-caps;
+  padding: 0.1rem;
+  font-size: 0.7rem;
   ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
   }
-
   li {
-    margin: 0.5em 0;
+    margin: 0 0.2rem;
   }
-
   a {
     color: $gray-400;
-    font-variant: small-caps;
-    text-decoration: none;
-    &:hover {
-      border-bottom: 1.5px solid $gray-500;
-    }
   }
 }
 
@@ -146,43 +145,17 @@ Contenu de la page
 ========================================================================== */
 
 .page-content {
-  margin: 1em auto 4em auto;
-  padding: 1em;
+  padding: 1rem 1.2rem;
+  min-height: 89vh;
 
-  h2 {
-    color: $primary;
-    font-variant: small-caps;
+  p {
+    text-align: justify;
   }
-}
-
-.post-list {
-  list-style: none;
-  padding-left: 0.6em;
-
-  h3 {
-    margin-top: 0;
-  }
-}
-
-.post-meta {
-  color: $gray-400;
-  font-size: 0.8em;
-}
-
-.post-link {
-  color: $primary;
-  font-weight: bolder;
-  font-variant: small-caps;
-  text-decoration: none;
-}
-
-.post-content {
-  text-align: justify;
 
   img {
     display: block;
     margin: 0 auto;
-    width: 75%;
+    width: 90%;
 
     &.small-img {
       width: 200px;
@@ -204,98 +177,95 @@ Pied de page
   background-color: $secondary;
   color: $light;
   font-family: $title-font;
-  width: 100%;
-
+  font-size: 0.8rem;
   ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0.8rem 0;
-    margin: 0;
+    margin-bottom: 0;
   }
-
   li {
-    margin: 0 0.3rem;
+    margin: 0 0.2rem;
   }
 }
 
-.author-email {
-  color: $light;
-  font-style: italic;
+/* ==========================================================================
+Page d'accueil
+========================================================================== */
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+p.post-read-more {
+  text-align: right;
+}
+
+/* ==========================================================================
+Articles
+========================================================================== */
+
+.post-meta {
+  color: $gray-400;
+  font-size: 0.8em;
 }
 
 /* ==========================================================================
 Responsive Design
 ========================================================================== */
 
-/* Mobile */
-@media only screen and (max-width: 400px) {
-  .site-nav {
-    font-size: 0.7em;
-
-    ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    li {
-      margin: 0.2em;
-      max-width: 100px;
-    }
-  }
-
-  .page-content {
-    margin: 0 auto 4em auto;
-    width: 95%;
-  }
-}
-
-/* Tablette */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  .site-nav {
-    ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    li {
-      margin: 0.5em;
-      max-width: 200px;
-    }
-  }
-
-  .page-content {
-    width: 95%;
-  }
-}
-
-/* Tablette */
 @media only screen and (min-width: 401px) {
   .site-header {
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .site-header {
+    background-color: $light;
     position: fixed;
     top: 0;
-    right: 0;
+    width: 100%;
+  }
+
+  .site-nav {
+    background-color: $light;
+    position: fixed;
+    top: 2rem;
     width: 100%;
   }
 
   .page-content {
-    margin-top: 4rem;
+    margin: 4rem auto 1rem auto;
+    width: 960px;
   }
 }
 
-/* Bureau */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1301px) {
   .site-nav {
-    padding: 0;
+    background-color: $light;
+    border-bottom: none;
+    font-size: 1rem;
+    max-width: 200px;
+    min-width: 120px;
+    padding-right: 0.6rem;
     position: fixed;
     right: 0;
-    top: 4em;
-    width: 10%;
+    top: 3rem;
+    width: auto;
+
+    ul {
+      flex-direction: column;
+    }
   }
 
   .page-content {
-    width: 75%;
+    margin-top: 2rem;
   }
 }
