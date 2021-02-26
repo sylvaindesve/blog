@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* ==========================================================================
+Styles de base
+========================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root { background: #f6f3f6; color: #495057; font-family: "Goudy Old Style", "Palatino", "Times New Roman", serif; font-size: 18px; font-weight: 300; line-height: 28px; }
+
+h1, h2, h3, h4 { color: #1f5095; font-family: "Avenir", "Helvetica", sans-serif; font-weight: 700; }
+
+h1 { margin: 0.2rem 0; }
+
+h2 { color: #8bafcf; font-variant: small-caps; margin: 0.1rem 0; }
+
+h3 { color: #c1d4e5; font-variant: small-caps; margin: 0.1rem 0; }
+
+p { margin-top: 0; margin-bottom: 1rem; }
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+ol, ul { margin-top: 0; margin-bottom: 1rem; padding-left: 2rem; }
+
+a { color: #8bafcf; text-decoration: none; }
+
+a:hover { color: #afc8de; text-decoration: underline; }
+
+blockquote { border-left: 3px solid #8bafcf; color: #8bafcf; font-size: 1.2rem; font-style: italic; font-weight: 400; margin: 0 0 1rem 1.5rem; quotes: "“" "”" "‘" "’"; }
+
+blockquote p { margin: 1rem; }
+
+blockquote p::before { content: open-quote; }
+
+blockquote p::after { content: close-quote; }
+
+/* ==========================================================================
+Entête
+========================================================================== */
+.site-header { border-bottom: 2px #dee2e6 solid; padding: 0.2rem; }
+
+.site-header h1 { font-size: 1rem; margin: 0; }
+
+.site-header p { font-size: 0.7rem; font-style: italic; margin-bottom: 0; }
+
+/* ==========================================================================
+Navigation
+========================================================================== */
+.site-nav { border-bottom: 1px #dee2e6 solid; font-variant: small-caps; padding: 0.1rem; font-size: 0.7rem; }
+
+.site-nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; margin-bottom: 0; padding-left: 0; }
+
+.site-nav li { margin: 0 0.2rem; }
+
+.site-nav a { color: #ced4da; }
+
+/* ==========================================================================
+Contenu de la page
+========================================================================== */
+.page-content { padding: 1rem 1.2rem; min-height: 89vh; }
+
+.page-content p { text-align: justify; }
+
+.page-content img { display: block; margin: 0 auto; width: 90%; }
+
+.page-content img.small-img { width: 200px; }
+
+.page-content img.small-img.left { float: left; }
+
+.page-content img.small-img.right { float: right; }
+
+/* ==========================================================================
+Pied de page
+========================================================================== */
+.site-footer { background-color: #1f5095; color: #f6f3f6; font-family: "Avenir", "Helvetica", sans-serif; font-size: 0.8rem; }
+
+.site-footer ul { display: flex; justify-content: center; list-style: none; margin-bottom: 0; }
+
+.site-footer li { margin: 0 0.2rem; }
+
+/* ==========================================================================
+Page d'accueil
+========================================================================== */
+.post-list { list-style: none; padding-left: 0; }
+
+p.post-read-more { text-align: right; }
+
+/* ==========================================================================
+Articles
+========================================================================== */
+.post-meta { color: #ced4da; font-size: 0.8em; }
+
+/* ==========================================================================
+Autres
+========================================================================== */
+.social-link img { width: 34px; }
+
+/* ==========================================================================
+Responsive Design
+========================================================================== */
+@media only screen and (min-width: 401px) { .site-header { display: flex; justify-content: flex-start; } .site-header p { margin-left: 1rem; } }
+
+@media only screen and (min-width: 961px) { .site-header { background-color: #f6f3f6; position: fixed; top: 0; width: 100%; } .site-nav { background-color: #f6f3f6; position: fixed; top: 2rem; width: 100%; } .page-content { margin: 4rem auto 1rem auto; width: 960px; } }
+
+@media only screen and (min-width: 1301px) { .site-nav { background-color: #f6f3f6; border-bottom: none; font-size: 1rem; max-width: 200px; min-width: 120px; padding-right: 0.6rem; position: fixed; right: 0; top: 3rem; width: auto; } .site-nav ul { flex-direction: column; } .page-content { margin-top: 2rem; } }
+
+/*# sourceMappingURL=main.css.map */
